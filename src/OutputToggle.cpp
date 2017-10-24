@@ -2,13 +2,13 @@
 
 
 // constructor
-void OutputToggle::OutputToggle (uint8_t pin)
+OutputToggle::OutputToggle (uint8_t pin)
 {
   pin_ = pin;
 }
 
 // functions
-void begin ()
+void OutputToggle::begin ()
 {
   // reset output pin
   pinStatus_ = false;
@@ -20,7 +20,7 @@ bool OutputToggle::toggle ()
   // toggle pin
   pinStatus_ = ! pinStatus_;
   // writes new output
-  digitalWrite(pin_, pinStatus_)
+  digitalWrite(pin_, pinStatus_);
   return pinStatus_;
 }
 
