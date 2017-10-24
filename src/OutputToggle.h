@@ -7,22 +7,19 @@
   #endif // end of if ARDUINO
   class OutputToggle
   {
-  private:
+  public:
     // constructor
     OutputToggle (
-      const uint8_t pin         // the input pin
+      const uint8_t pin   // the input pin
     );
 
     // functions
     void begin ();        // instantiates the Toggle function
-
     bool toggle ();       // toggles the output pin
-
-    // returns the current value
     bool currentValue (); // Returnes the current pin status
 
 
-  public:
+  private:
     uint8_t   pin_;       // the input pin
     bool      pinStatus_; // current pinStatus
   }; // end of class OutputToggle
