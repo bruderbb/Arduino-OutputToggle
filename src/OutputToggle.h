@@ -1,10 +1,7 @@
- #ifndef OutputToggle_h
-  #define OutputToggle_h
-  #if ARDUINO >= 100
-    #include <Arduino.h>
-    #else
-    #include <WProgram.h>
-  #endif // end of if ARDUINO
+#ifndef OutputToggle_h
+#define OutputToggle_h
+#include <Arduino.h>
+
   class OutputToggle
   {
   public:
